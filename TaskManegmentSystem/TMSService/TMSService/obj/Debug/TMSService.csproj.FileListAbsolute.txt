@@ -1,0 +1,7 @@
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\bin\Debug\TMSService.dll.config
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\bin\Debug\TMSService.dll
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\bin\Debug\TMSService.pdb
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\obj\Debug\TMSService.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\obj\Debug\TMSService.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\obj\Debug\TMSService.dll
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSService\obj\Debug\TMSService.pdb

@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1209
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMSService", "TMSService\TMSService.csproj", "{7C8B0FF3-7E8F-458D-A59F-760C4FB58477}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TMSHost", "TMSHost\TMSHost.csproj", "{30968B36-1E16-440F-B5A7-29C32F648906}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7C8B0FF3-7E8F-458D-A59F-760C4FB58477}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7C8B0FF3-7E8F-458D-A59F-760C4FB58477}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7C8B0FF3-7E8F-458D-A59F-760C4FB58477}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7C8B0FF3-7E8F-458D-A59F-760C4FB58477}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30968B36-1E16-440F-B5A7-29C32F648906}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30968B36-1E16-440F-B5A7-29C32F648906}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30968B36-1E16-440F-B5A7-29C32F648906}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30968B36-1E16-440F-B5A7-29C32F648906}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A40C272A-A776-45C9-8A48-EBF3A63F0D93}
+	EndGlobalSection
+EndGlobal

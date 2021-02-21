@@ -1,0 +1,14 @@
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSHost.exe.config
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSHost.exe
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSHost.pdb
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.csprojAssemblyReference.cache
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.Properties.Resources.resources
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.csproj.GenerateResource.cache
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.csproj.CoreCompileInputs.cache
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.exe
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.pdb
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSService.dll
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSService.pdb
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\bin\Debug\TMSService.dll.config
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.Form1.resources
+C:\Users\HP\source\repos\TaskManegmentSystem\TMSService\TMSHost\obj\Debug\TMSHost.csproj.CopyComplete
