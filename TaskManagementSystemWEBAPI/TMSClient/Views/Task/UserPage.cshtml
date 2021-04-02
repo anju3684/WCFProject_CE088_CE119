@@ -1,0 +1,110 @@
+﻿@model IEnumerable<TMSClient.Models.TaskViewModel1>
+
+@{
+    ViewBag.Title = "UserPage";
+}
+
+
+<p>
+</p>
+<table class="table">
+    @if (Model.Count() != 0)
+    {
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.submited)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th></th>
+    </tr>
+    }
+    else
+    {
+        <p>Whooo...Not Tasks Yet</p>
+    }
+
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.TaskId)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.subject)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AssignedTo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.LastDate)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Time.TimeOfDay)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Priority)
+            </td>
+            <td>
+                @if (item.submited != null)
+                {
+                    if (item.submited == "Before")
+                    {
+                        <p class="btn btn-success">Submited Before Deadline</p>
+                    }
+                    else
+                    {
+                        <p class="btn btn-danger">Submited After Deadline</p>
+                    }
+                }
+                else
+                {
+                    <p>Not Submited</p>
+                }
+            </td>
+            @if (item.Status != "Completed")
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    @Html.ActionLink("Submit", "SubmitTask", new { id = item.TaskId })
+                </td>
+            }
+            else
+            {
+                <td>
+                    @Html.DisplayFor(modelItem => item.Status)
+                </td>
+                <td>
+                    <button disabled class="btn btn-success">Submited</button>
+                </td>
+            }
+        </tr>
+}
+
+</table>

@@ -1,0 +1,80 @@
+﻿@model TMSClient.Models.TaskViewModel1
+
+@{
+    ViewBag.Title = "SubmitTask";
+}
+
+<h2>SubmitTask</h2>
+
+<h3>Are you sure you want to submit this?</h3>
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        @Html.HiddenFor(model => model.TaskId)
+        <dt>
+            @Html.DisplayNameFor(model => model.subject)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.subject)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AssignedTo)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Time)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Time)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Priority)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Priority)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Status)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Status)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Submit" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

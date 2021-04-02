@@ -1,0 +1,40 @@
+﻿@model IEnumerable<TMSClient.Models.UserViewModel>
+
+@{
+    ViewBag.Title = "Users";
+}
+
+<h2>Users</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Register")
+</p>
+<p>
+    @Html.ActionLink("Home", "Index")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UserId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.email)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UserId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.email)
+        </td>
+        <td>
+            @Html.ActionLink("Delete", "DeleteUser", new { id = item.UserId })
+        </td>
+    </tr>
+}
+
+</table>

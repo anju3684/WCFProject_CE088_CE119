@@ -1,0 +1,95 @@
+﻿@using TMSClient.Models
+@model TaskViewModel
+@{
+    ViewBag.Title = "Create Task";
+    List<string> users = ViewBag.users as List<string>;
+}
+
+<h2>Create Task</h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">        
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(model => model.TaskId)
+        <div class="form-group">
+            @Html.LabelFor(model => model.subject, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.subject, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.subject, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextAreaFor(model => model.Description, htmlAttributes: new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            <label class="control-label col-md-2">AssignedTo</label>
+            <div class="col-md-10">
+                <select id="users" name="users" class="form-control" required>
+                    <option>Select User</option>
+                    @foreach (var u in users)
+                    {
+                        <option value="@u">@u</option>
+                    }
+                </select>
+            </div>
+        </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.LastDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">                    
+                    @Html.TextBoxFor(model => model.LastDate, htmlAttributes: new { @type = "date", @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.LastDate, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Time, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBoxFor(model => model.Time, htmlAttributes: new { @type = "time", @class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.Time, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.priority, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(m => m.priority, new SelectList(Enum.GetValues(typeof(TaskViewModel.Priority))),"Select Priority",htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.priority, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.status, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownListFor(m => m.status,
+            new SelectList(Enum.GetValues(typeof(TaskViewModel.Status))),
+            "Select Status",htmlAttributes: new { @class = "form-control"})
+                    @Html.ValidationMessageFor(model => model.status, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>

@@ -1,0 +1,101 @@
+﻿@model IEnumerable<TMSClient.Models.TaskViewModel1>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Assign Task", "Create")
+</p>
+<p>
+    @Html.ActionLink("Register User", "Register")
+</p>
+<p>
+    @Html.ActionLink("Users", "Users")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.TaskId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.subject)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Description)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AssignedTo)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LastDate)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Time)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Priority)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Status)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.submited)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.TaskId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.subject)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Description)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AssignedTo)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LastDate)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Time.TimeOfDay)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Priority)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Status)
+        </td>
+        <td>
+            @if(item.submited != null)
+            {
+                if(item.submited == "Before")
+                {
+                    <p class="btn btn-success">Submited Before Deadline</p>
+                }
+                else
+                {
+                    <p class="btn btn-danger">Submited After Deadline</p>
+                }
+            }
+            else
+            {
+                <p>Not Submited</p>
+            }
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.TaskId }) |
+            @Html.ActionLink("Details", "Details", new { id = item.TaskId }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.TaskId })
+        </td>
+    </tr>
+}
+
+</table>
